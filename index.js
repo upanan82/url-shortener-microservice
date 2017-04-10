@@ -4,7 +4,7 @@ var express = require('express'),
     validUrl = require('valid-url'),
     MongoClient = require('mongodb').MongoClient,
     ObjectId = require('mongodb').ObjectID,
-    urli = 'mongodb://<db_username>:<password>@ds113580.mlab.com:13580/freecodecamp_1';
+    urli = 'mongodb://' + process.env.DB_LOGIN + ':' + process.env.DB_PASS + '@ds113580.mlab.com:13580/freecodecamp_1';
 
 // Listen port
 app.set('port', (process.env.PORT || 5000));
